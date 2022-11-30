@@ -3,7 +3,7 @@ import Contacts from "./components/Contacts";
 
 function App() {
   return (
-    <div className="App">
+    <div className="container py-3">
       <Contacts />
     </div>
   );
