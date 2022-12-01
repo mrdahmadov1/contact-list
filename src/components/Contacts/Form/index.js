@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./index.css";
 
 const initialValue = { fullName: "", phoneNumber: "" };
 function MyForm({ addContact, contacts }) {
@@ -49,7 +50,7 @@ function MyForm({ addContact, contacts }) {
           value={form.phoneNumber || ""}
         />
       </FormGroup>
-      <Button color="primary">Add Contact</Button>
+      <Button color="primary addBtn">Add Contact</Button>
     </Form>
   );
 }

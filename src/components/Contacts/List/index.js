@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./index.css";
 import {
   ListGroup,
   ListGroupItem,
@@ -33,11 +34,14 @@ function List({ contacts }) {
           value={filterText}
         />
       </FormGroup>
-      <ListGroup>
+      <p className="m-0">Total Contacts ({filtered.length})</p>
+      <ListGroup className="pt-3">
         {filtered.map((contact, index) => (
-          <ListGroupItem key={index}>
+          <ListGroupItem className="listItem" key={index}>
             <ListGroupItemHeading>{contact.fullName}</ListGroupItemHeading>
-            <ListGroupItemText>{contact.phoneNumber}</ListGroupItemText>
+            <ListGroupItemText className="textNumber">
+              {contact.phoneNumber}
+            </ListGroupItemText>
           </ListGroupItem>
         ))}
       </ListGroup>
